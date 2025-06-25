@@ -1,2 +1,0 @@
-# blog
-Craig's Blog
