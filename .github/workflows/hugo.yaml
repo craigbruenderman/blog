@@ -51,7 +51,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true && npm install --save-dev tailwindcss @tailwindcss/cli"
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Install Tailwind
+        run: npm install --save-dev tailwindcss @tailwindcss/cli
       - name: Cache Restore
         id: cache-restore
         uses: actions/cache/restore@v4
