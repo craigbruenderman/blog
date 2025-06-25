@@ -1,6 +1,6 @@
-baseURL: https://example.org/
+baseURL: https://newblog.bruenderman.org
 languageCode: en-us
-title: My New Hugo Site
+title: Craig Bruenderman's Blog
 theme: tailroad
 
 # Refer to this link https://gohugo.io/functions/css/tailwindcss/  
@@ -12,6 +12,7 @@ build:
     target: css
   - source: (postcss|tailwind)\.config\.js
     target: css
+
 module:
   mounts:
   - source: assets
@@ -19,6 +20,11 @@ module:
   - disableWatch: true
     source: hugo_stats.json
     target: assets/notwatching/hugo_stats.json
+
+caches:
+  images:
+    dir: :cacheDir/images
+
 params:
   mainSections: ['posts']
   sidebar:
@@ -26,8 +32,10 @@ params:
     widgets: ['recent', 'categories', 'social']
     recentsCount: 6 # Default is 5
     showCounts: true # Default is false
+
 outputs:
   home: ['html', 'rss', 'json']
+
 menu:
   main:
   - identifier: home

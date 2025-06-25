@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Craig Bruenderman&#39;s Blog</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Craig Bruenderman&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Jun 2025 01:15:22 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 25 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AZ700</title>
-      <link>http://localhost:1313/notes/az700/</link>
-      <pubDate>Wed, 25 Jun 2025 01:15:22 -0400</pubDate>
-      <guid>http://localhost:1313/notes/az700/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>How I travelled the world</title>
+      <title>First Test Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Sun, 25 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/my-first-post/</guid>

@@ -1,10 +1,6 @@
 ---
-title: How I travelled the world 
+title: First Test Post
 date: 2025-05-25
-menu:
-  main: # main or footer will work and accordingly both can be specified
-    title: vlog
-#menu: main also works page title is shown as menu.
 ---
 
 ## Introduction
