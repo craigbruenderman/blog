@@ -8,10 +8,10 @@
       "br",
       "button",
       "div",
-      "em",
       "footer",
       "h1",
       "h2",
+      "h3",
       "head",
       "header",
       "hr",
@@ -26,10 +26,10 @@
       "meta",
       "nav",
       "p",
+      "pre",
       "script",
       "section",
       "span",
-      "strong",
       "time",
       "title",
       "ul"
@@ -106,6 +106,7 @@
       "h-5",
       "h-full",
       "hidden",
+      "highlight",
       "hover:bg-gray-200",
       "hover:bg-gray-300",
       "hover:bg-gray-700",
@@ -204,6 +205,7 @@
       "content",
       "introduction",
       "main-content",
+      "overview",
       "posts",
       "scrollTopBtn",
       "search-shortcut",
@@ -213,7 +215,12 @@
       "theme-icon-light",
       "theme-root",
       "theme-toggle",
-      "thumbnail"
+      "thumbnail",
+      "type-1-auto-discover-segment-route",
+      "type-2-mac-ip-route",
+      "type-3-inclusive-multicast-ethernet-tag-imet-route",
+      "type-4-ethernet-segment-route",
+      "type-5-ip-prefix-route"
     ]
   }
 }

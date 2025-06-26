@@ -45,3 +45,9 @@ menu:
   - identifier: notes
     name: notes
     url: /notes
+  - identifier: projects
+    name: projects
+    url: projects
+  - identifier: about
+    name: about
+    url: /about
