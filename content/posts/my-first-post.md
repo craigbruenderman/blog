@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: 'Customization of the Theme with Configuration'
 description: Describes common Mainroad theme configuration 
 date: 2025-05-25

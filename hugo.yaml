@@ -28,7 +28,7 @@ caches:
 params:
   mainSections: ['posts']
   sidebar:
-    enable: true
+    enable: false
     widgets: ['recent', 'categories', 'social']
     recentsCount: 6 # Default is 5
     showCounts: true # Default is false
