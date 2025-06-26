@@ -17,6 +17,7 @@
       "hr",
       "html",
       "i",
+      "img",
       "input",
       "kbd",
       "li",
@@ -63,6 +64,7 @@
       "dark:border-gray-700",
       "dark:group-hover:bg-gray-500",
       "dark:hidden",
+      "dark:hover:bg-gray-600",
       "dark:hover:bg-gray-700",
       "dark:hover:bg-gray-800",
       "dark:hover:text-gray-300",
@@ -102,8 +104,10 @@
       "group-hover:bg-gray-200",
       "group-hover:shadow-md",
       "h-5",
+      "h-full",
       "hidden",
       "hover:bg-gray-200",
+      "hover:bg-gray-300",
       "hover:bg-gray-700",
       "hover:bg-purple-600",
       "hover:bg-sky-600",
@@ -125,6 +129,7 @@
       "lg:px-8",
       "line-clamp-1",
       "line-clamp-2",
+      "max-h-32",
       "max-w-5xl",
       "max-w-none",
       "mb-0",
@@ -139,6 +144,7 @@
       "mt-2",
       "mt-4",
       "mx-auto",
+      "object-cover",
       "p-2",
       "p-4",
       "placeholder-gray-400",
@@ -206,7 +212,8 @@
       "theme-icon-dark",
       "theme-icon-light",
       "theme-root",
-      "theme-toggle"
+      "theme-toggle",
+      "thumbnail"
     ]
   }
 }

@@ -1,13 +1,13 @@
 ---
-title: First Test Post
 draft: false
 title: 'Customization of the Theme with Configuration'
 description: Describes common Mainroad theme configuration 
+date: 2025-05-25
+image: /iamges/arista_icon.jpeg
 categories:
   - "Networking"
 tags:
   - "Arista"
-date: 2025-05-25
 ---
 
 ## Introduction
