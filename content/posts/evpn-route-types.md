@@ -4,10 +4,10 @@ description:
 date: 2025-03-24
 image: /images/evpn_vxlan.png
 categories:
-    - Networking
+  - Networking
 tags:
-    - EVPN
-    - VXLAN
+  - EVPN
+  - VXLAN
 ---
 
 ## Overview
