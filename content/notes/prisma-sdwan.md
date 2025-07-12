@@ -5,6 +5,7 @@ date: 2025-05-17
 geometry: margin=2cm
 toc: true
 output: pdf_document
+showTableOfContents: true
 ---
 
 # Branch Design 
