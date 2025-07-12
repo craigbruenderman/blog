@@ -1,10 +1,12 @@
 ---
 title: "Arista ACE Level 3 Notes"
 author: Craig Bruenderman
-image: /images/arista_logo.png
 geometry: margin=2cm
+date: 2025-01-01
 toc: true
 output: pdf_document
+categories: ["Networking"]
+tags: ["Certification", "EVPN", "VXLAN", "Arista"]
 ---
 
 # Cloudvision Overview

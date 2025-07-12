@@ -1,6 +1,7 @@
 ---
 title: "Arista EVPN Sample Config"
 author: Craig Bruenderman
+date: 2025-01-01
 geometry: margin=2cm
 toc: true
 output: pdf_document

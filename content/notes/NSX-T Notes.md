@@ -1,6 +1,7 @@
 ---
 title: "NSX-T Notes"
 author: Craig Bruenderman
+date: 2022-01-01
 geometry: margin=2cm
 toc: true
 output: pdf_document

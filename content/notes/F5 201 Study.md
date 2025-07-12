@@ -2,6 +2,7 @@
 title: "F5 201 Study Notes"
 author: Craig Bruenderman
 geometry: margin=2cm
+date: 2018-01-01
 toc: true
 output: pdf_document
 categories: ["Networking"]

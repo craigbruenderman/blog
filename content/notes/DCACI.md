@@ -2,6 +2,7 @@
 title: "ACI Fundamentals"
 author: Craig Bruenderman
 geometry: margin=2cm
+date: 2020-01-01
 toc: true
 output: pdf_document
 categories: ["Networking"]
