@@ -1,6 +1,7 @@
 ---
 title: "GCP Networking"
 author: Craig Bruenderman
+draft: true
 date: 2025-06-06
 geometry: margin=2cm
 toc: true

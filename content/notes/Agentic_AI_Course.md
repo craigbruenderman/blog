@@ -1,5 +1,6 @@
 ---
 title: "AI Essentials"
+draft: true
 author: Craig Bruenderman
 date: 2025-05-20
 geometry: margin=2cm

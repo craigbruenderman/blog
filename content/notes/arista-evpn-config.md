@@ -1,7 +1,6 @@
 ---
 title: Arista EVPN Sample Config
 author: Craig Bruenderman
-image: /images/arista_logo.png
 geometry: margin=2cm
 toc: true
 output: pdf_document
