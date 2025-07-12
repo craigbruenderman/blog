@@ -1,9 +1,11 @@
 ---
-title: EVPN VXLAN Fundamentals
+title: "EVPN VXLAN Fundamentals"
 author: Craig Bruenderman
 geometry: margin=2cm
 toc: true
 output: pdf_document
+categories: ["Networking"]
+tags: ["EVPN", "VXLAN"]
 ---
 
 ## VXLAN Overview

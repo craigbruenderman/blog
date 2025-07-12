@@ -5,7 +5,8 @@ author: Craig Bruenderman
 geometry: margin=2cm
 type: list
 output: pdf_document
-image: /images/cisco-trustec.jpg
+categories: ["Networking"]
+tags: ["Trustsec", "Cisco"]
 ---
 
 ## Terms

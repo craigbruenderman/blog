@@ -4,6 +4,8 @@ author: Craig Bruenderman
 geometry: margin=2cm
 toc: true
 output: pdf_document
+categories: ["Cloud", "Networking"]
+tags: ["Azure"]
 ---
 
 ## Topics

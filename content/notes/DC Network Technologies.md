@@ -1,10 +1,11 @@
 ---
-title: Data Center Network Technology Hotness
+title: "Data Center Network Technology Hotness"
 author: Craig Bruenderman
 date: 2015-01-27
 geometry: margin=2cm
 toc: true
 output: pdf_document
+categories: ["Networking"]
 ---
 
 ## Overall

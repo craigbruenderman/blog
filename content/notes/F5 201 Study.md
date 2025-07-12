@@ -1,3 +1,13 @@
+---
+title: "F5 201 Study Notes"
+author: Craig Bruenderman
+geometry: margin=2cm
+toc: true
+output: pdf_document
+categories: ["Networking"]
+tags: ["F5", "Certification"]
+---
+
 ## Objective 1.01
 
 ### Packet processing order

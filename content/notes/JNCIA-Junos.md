@@ -1,10 +1,11 @@
 ---
 title: "JNCIA-Junos"
 author: Craig Bruenderman
-image: /images/juniper-logo.png
 geometry: margin=2cm
 toc: true
 output: pdf_document
+categories: ["Networking"]
+tags: ["Certification", "Juniper"]
 ---
 
 ## Network Terminology

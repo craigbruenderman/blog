@@ -1,31 +1,18 @@
 ---
-title: BGP Notes
+title: "BGP Notes"
 date: 2024-10-24
 author: Craig Bruenderman
 geometry: margin=2cm
 output: pdf_document
-image: /images/route-bgp.png
-categories:
-  - Networking
-  - EVPN
-tags:
-  - EVPN
-  - VXLAN
-  - Arista
+categories: ["Networking"]
+tags: ["BGP"]
 ---
-
-# Overview
-
-These are my BGP notes.
-
-<!--more-->
 
 ## BGP
 
 * BGP decides on prefix vector attributes, not anything link related like IGP's do
 * AFI Address Family Identifiers
 * SAFI Sub-Address Family Identifiers
-
 
 ## Autonomous Systems
 

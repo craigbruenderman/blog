@@ -5,6 +5,8 @@ date: 2016-09-08
 geometry: margin=2cm
 toc: true
 output: pdf_document
+categories: ["Networking"]
+tags: ["WiFi", "Cisco"]
 ---
 
 # WLAN Fundamentals

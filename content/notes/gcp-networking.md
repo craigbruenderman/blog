@@ -6,6 +6,8 @@ date: 2025-06-06
 geometry: margin=2cm
 toc: true
 output: pdf_document
+categories: ["Networking", "Cloud"]
+tags: ["GCP"]
 ---
 
 ## VPC

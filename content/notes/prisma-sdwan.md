@@ -1,11 +1,12 @@
 ---
-title: "Prisma SD-WAN"
+title: "Prisma SD-WAN Notes"
 author: Craig Bruenderman
 date: 2025-05-17
 geometry: margin=2cm
 toc: true
 output: pdf_document
-showTableOfContents: true
+categories: ["Networking"]
+tags: ["SD-WAN", "Palo Alto"]
 ---
 
 # Branch Design 

@@ -1,10 +1,11 @@
 ---
-title: ACI Fundamentals
+title: "ACI Fundamentals"
 author: Craig Bruenderman
-image: /images/cisco-aci.png
 geometry: margin=2cm
 toc: true
 output: pdf_document
+categories: ["Networking"]
+tags: ["ACI", "Cisco"]
 ---
 
 ## Cisco ACI Fabric Infrastructure and Basic Concepts

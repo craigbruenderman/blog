@@ -1,3 +1,13 @@
+---
+title: "NSX-T Notes"
+author: Craig Bruenderman
+geometry: margin=2cm
+toc: true
+output: pdf_document
+categories: ["Networking"]
+tags: ["NSX-T"]
+---
+
 # NSX-T Management and Control Plane
 
 ## NSX-T vs NSX-V
