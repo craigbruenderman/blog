@@ -1,12 +1,9 @@
 ---
-title: Running an Airpint Container on a Mikrotrik Router
+title: "Running an Airpint Container on a Mikrotrik Router"
 draft: true
-date: 2025-07-09
-categories:
-  - Containers
-tags:
-  - Mikrotik
-  - Airprint
+date: "2025-07-09"
+categories: ["Containers"]
+tags: ["Mikrotik", "Airprint"]
 ---
 
 ## 

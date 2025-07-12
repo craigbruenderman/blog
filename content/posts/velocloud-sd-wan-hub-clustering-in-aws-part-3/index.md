@@ -1,16 +1,11 @@
 ---
 title: VeloCloud SD-WAN Hub Clustering in AWS (Part 3)
 description: 
-date: 2024-10-26
-image: /images/velocloud.png
-categories:
-    - Networking
-    - SD-WAN
-tags:
-    - AWS
-    - SD-WAN
-    - Transit Gateway
-    - Velocloud
+date: "2024-10-26"
+series: ["VeloCloud SD-WAN Hub Clustering in AWS"]
+series_order: 3
+categories: ["Networking", "SD-WAN"]
+tags: ["AWS", "SD-WAN", "Transit Gateway", "Velocloud"]
 ---
 
 # Part 3: AWS Network Plumbing
