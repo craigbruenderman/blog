@@ -1,6 +1,7 @@
 ---
 title: About Me
 date: 2025-03-01
+layout: simple
 ---
 
  ![View from Humacao, PR](/images/humacao_ocean.webp)

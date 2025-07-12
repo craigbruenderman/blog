@@ -1,7 +1,6 @@
 ---
 title: 'Azure Policy-Based VPN to Cisco ASA'
 date: '2024-11-13'
-image: /images/ipsec-logo.png
 categories:
     - Azure
     - Networking

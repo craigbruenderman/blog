@@ -2,7 +2,6 @@
 title: Running an Airpint Container on a Mikrotrik Router
 draft: true
 date: 2025-07-09
-image: /images/docker-thumb.jpg
 categories:
   - Containers
 tags:
