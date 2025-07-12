@@ -1,6 +1,7 @@
 ---
 title: "EVPN VXLAN Fundamentals"
 author: Craig Bruenderman
+date: 2023
 geometry: margin=2cm
 toc: true
 output: pdf_document
