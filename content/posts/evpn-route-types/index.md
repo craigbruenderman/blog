@@ -2,13 +2,8 @@
 title: EVPN Route Types
 description:
 date: 2025-03-24
-image: /images/evpn_vxlan.png
-categories:
-  - Networking
-  - EVPN
-tags:
-  - EVPN
-  - VXLAN
+categories: ["Networking"]
+tags: ["EVPN", "VXLAN"]
 ---
 
 ## Overview

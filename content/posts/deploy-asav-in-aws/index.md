@@ -1,13 +1,9 @@
 ---
 draft: true
-title: 'Deploying Cisco ASAv in AWS'
+title: "Deploying Cisco ASAv in AWS"
 date: 2025-07-06
-image: /images/cisco-asav-icon.png
-categories:
-  - "Networking"
-tags:
-  - "Cisco"
-  - "SD-WAN"
+categories: ["Networking", "Cloud"]
+tags: ["Cisco", "ASA", "AWS"]
 ---
 
 # Overview

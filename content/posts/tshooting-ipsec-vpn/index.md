@@ -1,14 +1,9 @@
 ---
-title: Troubleshooting IPSEC VPNs
+title: "Troubleshooting IPSEC VPNs"
 draft: true
 date: 2025-07-04
-image: /images/ipsec-logo.png
-categories:
-  - Networking
-  - Troubleshooting
-tags:
-  - IPSEC
-  - VPN
+categories: ["Networking", "Troubleshooting"]
+tags: ["IPSEC", "VPN"]
 ---
 
 ## Overview

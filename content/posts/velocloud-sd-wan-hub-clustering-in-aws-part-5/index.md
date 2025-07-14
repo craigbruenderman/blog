@@ -3,7 +3,7 @@ title: "VeloCloud SD-WAN Hub Clustering in AWS (Part 5)"
 date: "2024-10-28"
 series: ["VeloCloud SD-WAN Hub Clustering in AWS"]
 series_order: 5
-categories: ["Networking", "SD-WAN"]
+categories: ["Networking"]
 tags: ["AWS", "SD-WAN", "Transit Gateway", "Velocloud"]
 ---
 

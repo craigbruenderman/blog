@@ -2,13 +2,8 @@
 title: EVPN VXLAN Concepts
 draft: true
 date: 2025-07-04
-image: /images/evpn_vxlan.png
-categories:
-  - Networking
-  - EVPN
-tags:
-  - EVPN
-  - VXLAN
+categories: ["Networking"]
+tags: ["EVPN", "VXLAN"]
 ---
 
 ## Overview
