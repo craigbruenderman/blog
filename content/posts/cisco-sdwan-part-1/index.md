@@ -2,12 +2,8 @@
 draft: true
 title: "Cisco SD-WAN (Part 1)"
 date: "2025-07-05"
-categories:
-  - 'Networking'
-  - 'SD-WAN'
-tags:
-  - Cisco
-  - SD-WAN
+categories: ["Networking"]
+tags: ["Cisco", "SD-WAN"]
 ---
 
 # Part 1: Overview

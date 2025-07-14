@@ -6,8 +6,6 @@ categories: ["Containers"]
 tags: ["Mikrotik", "Airprint"]
 ---
 
-## 
-
 ## Background
 
 [Container Info](https://tangentsoft.com/mikrotik/wiki?name=Container+Limitations#compliance)

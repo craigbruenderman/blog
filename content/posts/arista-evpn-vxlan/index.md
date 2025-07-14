@@ -1,15 +1,9 @@
 ---
-title: Arista EVPN VXLAN
+title: "Arista EVPN VXLAN"
 draft: true
 date: 2025-07-04
-image: /images/arista_logo.png
-categories:
-  - Networking
-  - EVPN
-tags:
-  - EVPN
-  - VXLAN
-  - Arista
+categories: ["Networking"]
+tags: ["EVPN", "VXLAN", "Arista"]
 ---
 
 ## Verification Commands

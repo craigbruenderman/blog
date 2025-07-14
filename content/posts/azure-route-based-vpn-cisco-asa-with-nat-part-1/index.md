@@ -1,15 +1,8 @@
 ---
-title: 'Azure Route-Based VPN to Cisco ASA with NAT (Part 1)'
-date: '2024-11-11'
-image: /images/ipsec-logo.png
-categories:
-    - Azure
-    - Networking
-tags:
-    - ASA
-    - Azure
-    - IPSEC
-    - VPN
+title: "Azure Route-Based VPN to Cisco ASA with NAT (Part 1)"
+date: 2024-11-11
+categories: ["Networking"]
+tags: ["ASA", "Azure", "IPSEC", "VPN"]
 ---
 
 # Part 1: Concepts for Route-based VPN with ASA &amp; Azure VWAN

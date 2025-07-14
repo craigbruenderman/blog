@@ -1,14 +1,8 @@
 ---
-title: 'Azure Policy-Based VPN to Cisco ASA'
-date: '2024-11-13'
-categories:
-    - Azure
-    - Networking
-tags:
-    - ASA
-    - Azure
-    - IPSEC
-    - VPN
+title: "Azure Policy-Based VPN to Cisco ASA"
+date: 2024-11-13
+categories: ["Cloud", "Networking"]
+tags: ["ASA", "Azure", "IPSEC", "VPN"]
 ---
 
 # Configuring Policy-based VPN with ASA & Azure VWAN
