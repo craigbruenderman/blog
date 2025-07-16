@@ -16,7 +16,7 @@ In this series I'll generally discuss the Cisco SD-WAN solution and its componen
 
 ## Some History
 
-Viptela was the company which originally built the solution which eventually was acquired by Cisco. Over time and as a result of Cisco purchasing Viptela, there have been name changes to the components of Cisco's SD-WAN solution. This set of components was originally known by its Viptela names. vManage was the management plane web UI, vSmart was the control plane, essentially acting to reflect SD-WAN routes to/from SD-WAN edges, and vBond served the role of validating edges were allowed to join the SD-WAN fabric. 
+Viptela was the company which originally built the solution which eventually was acquired by Cisco. Over time and as a result of Cisco purchasing Viptela, there have been name changes to the components of Cisco's SD-WAN solution. This set of components was originally known by its Viptela names. vManage was the management plane web UI, vSmart was the control plane, essentially acting to reflect SD-WAN routes to/from SD-WAN edges, and vBond served the role of validating edges were allowed to join the SD-WAN fabric.
 
 ## Solution Components
 

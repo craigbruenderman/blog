@@ -9,6 +9,8 @@ tags: ["Mikrotik", "Arista"]
 
 Containerlab is a great tool for labbing network infrastructure. It's lightweigth enough to run meaningful topologies on modest hardware. I can easily run a 12-node Arista EVPN VXLAN fabric on a machine from 2018 with 32GB of RAM. It is functionally similar to GNS3 or EVE-ng, but uses Docker containers to support many [node types](https://containerlab.dev/manual/kinds/). I used it to do my all my lab prep for the Arista ACE:L3 certification, which is great since I have no Arista lab gear at the moment.
 
+<!--more-->
+
 ## Installation
 
 Containerlab installation is straight-forward on Linux-based systems. The host I'll be running Containerlab on is a Lenovo laptop running Linux Mint, and I was able to isntall it directly using apt.
