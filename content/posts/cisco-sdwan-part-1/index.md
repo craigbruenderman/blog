@@ -2,13 +2,15 @@
 draft: true
 title: "Cisco SD-WAN (Part 1)"
 date: "2025-07-05"
+series: ["Cisco SD-WAN"]
+series_order: 1
 categories: ["Networking"]
 tags: ["Cisco", "SD-WAN"]
 ---
 
-# Part 1: Overview
+## Overview
 
-In this series I'll generally discuss the Cisco SD-WAN solution and its components, and then move on to explore the process of using automation to deploy and configure Catalyst SD-WAN edges. Some edges will be deployed inside of AWS VPCs in order to reach workloads inside of AWS from my home lab. 
+In this series I'll generally discuss the Cisco SD-WAN solution and its components, and then move on to explore the process of using automation to deploy and configure Catalyst SD-WAN edges. Some edges will be deployed inside of AWS VPCs in order to reach workloads inside of AWS from my home lab.
 
 <!--more-->
 
@@ -20,7 +22,7 @@ Viptela was the company which originally built the solution which eventually was
 
 Even though there are multiple components to the solution, it's convenient to be able to distinguish between SD-WAN edges, and everything else. Cisco's statement sums it up:
 
-"Cisco SD-WAN has been rebranded to Cisco Catalyst SD-WAN. As part of this rebranding, the vManage name has been changed to SD-WAN Manager, the vSmart name has been changed to SD-WAN Controller, and the vBond name has been changed to SD-WAN Validator. Together, the vManage, vSmart, and vBond will be referred to as the **SD-WAN control components** in this document."
+>Cisco SD-WAN has been rebranded to Cisco Catalyst SD-WAN. As part of this rebranding, the vManage name has been changed to SD-WAN Manager, the vSmart name has been changed to SD-WAN Controller, and the vBond name has been changed to SD-WAN Validator. Together, the vManage, vSmart, and vBond will be referred to as the **SD-WAN control components** in this document.
 
 | Component Name | Function |
 | -------------- | -------- |
@@ -52,9 +54,3 @@ This software component maintains the centralized control plane of the SD-WAN ne
 ### SD-WAN Edges
 
 These are the actual hardware or virtual devices deployed at physical sites or in public/private clouds. Edges  establish tunnels for data plane connectivity among the sites over one or more WAN transports. Edges are responsible for traffic forwarding, security, encryption, quality of service (QoS), dynamic routing protocols, and more. There have been a number of devices in this category over time, including the legacy Viptela 100/1000/2000 line and Viptela vSphere/KVM-based vEdge virtual devices, and more recently Cisco ISR/ASR series, CSR1000v, and Catalyst 8000v. There are software differences between these that you'll need to understand for a particular production design.
-
-## Logical Design
-
-Here's the logical design I'll be working with:
-
-![](/images/sdwan-logical.png)
