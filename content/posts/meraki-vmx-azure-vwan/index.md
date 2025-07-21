@@ -1,13 +1,19 @@
 ---
-title: "Meraki vMX in Azure with vWAN and BGP"
+title: "Meraki AutoVPN on vMX in Azure with vWAN and BGP"
 date: 2025-07-20
+series: ["Meraki AutoVPN on vMX in Azure"]
+series_order: 1
 categories: ["Cloud", "Networking"]
 tags: ["Meraki", "Azure", "BGP", "vWAN"]
 ---
 
 ## Overview
 
-This post explores using the Meraki vMX virtual device to build AutoVPN from branches into Azure. The vMX will only be used for WAN connectivity between branches, and not to provide any filtering services for traffic in/out of Azure on the public side. I'll be demonstrating a single vMX device in a single Azure region. This vMX will BGP peer with Azure vWAN so that it can inject branch prefixes it learns via AutoVPN, and advertise prefixes for resources within Azure out to the branch WAN.
+This post explores using the Meraki vMX virtual device to build AutoVPN from branches into Azure. Of course it is possible, and common, to use IPSEC with typical Azure VPN Gateways for branch connectivity, but AutoVPN has some advantages over normal IPSEC, especially in the convenience department as your branch count grows. I am demonstrating the addition of BGP with AutoVPN to set myself up for an easier migration of each branch from IPSEC to AutoVPN.
+
+As each branch becomes ready to migrate from an Azure VPN Gateway to AutoVPN, it's just a matter of removing the Azure and Meraki side IPSEC configuration, setting the branch to a spoke with the correct hub, and letting BGP dynamically handle the routing required to steer traffic between Azure and Meraki branch networks.
+
+The vMX will only be used for WAN connectivity between branches, and not to provide any filtering services for traffic in/out of Azure on the public side. I'll be demonstrating a single vMX device in a single Azure region. This vMX will BGP peer with Azure vWAN so that it can inject branch prefixes it learns via AutoVPN, and advertise prefixes for resources within Azure out to the branch WAN.
 
 ## Meraki vMX Deployment Modes
 
@@ -182,3 +188,4 @@ Notice the **# Routes** column. This gives a good indication that some NLRI have
 
 ## Conclusion
 
+At this point, we're all set to add new branches into AutoVPN and get forwarding working with Azure. In the next part of the series, I'll demonstrate what migrating branches from IPSEC entails.
