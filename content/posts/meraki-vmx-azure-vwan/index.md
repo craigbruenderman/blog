@@ -184,6 +184,8 @@ Notice the **# Routes** column. This gives a good indication that some NLRI have
 
 ### Test ICMP from Meraki Branch
 
+Finally, ICMP is used to demonstrate reachabilty from the test branch site SVI to the test Ubuntu workload in Azure.
+
 ![](/images/vmx-lab-branch-ping.png)
 
 ## Conclusion
