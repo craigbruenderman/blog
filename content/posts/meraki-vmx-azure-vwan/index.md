@@ -36,6 +36,10 @@ Routed mode doesn't match my scenario. It's more typically used on the branch si
 
 > This is the default selection. Choose this option if you want to use the WAN appliance as a layer 7 firewall to isolate and protect LAN traffic from the Internet (WAN). Client traffic to the Internet will have its source IP rewritten to match the WAN IP of the appliance. In this mode, the WAN appliance is generally also the default gateway for devices on the LAN. This section also provides a link to the DHCP settings page.
 
+## BGP with Meraki
+
+Enabling BGP under site to site VPN activates BGP on all MX's in your Org. Hubs (in concentrator mode) eBGP peer with an upstream layer-3 device, and will inject the prefixes they learn from AutoVPN branch sites. Under the hood of AutoVPN, iBGP runs between hub(s) and spokes in a single Meraki AS. Meraki BGP documentation link below.
+
 [Meraki BGP page](https://documentation.meraki.com/MX/Networks_and_Routing/Border_Gateway_Protocol_(BGP))
 
 ## Topology
