@@ -8,6 +8,16 @@ categories: ["Devops", "Cloud"]
 tags: ["AWS", "Github", "CI/CD"]
 ---
 
+{{< typeit 
+  tag=h4
+  speed=50
+  loop=false
+>}}
+git init
+git add .
+git commit -m "First commit!"
+{{< /typeit >}}
+
 ## Series Overview
 
 In this series, I'll be looking at the Git version control system, along with Github's basic function as a remote repository, and Github's feature called Github Actions as part of Continuous Integration / Continuous Delivery. I am certainly not a professional software engineer, but these are just a few of the tools I incorporate for the types of development work I do.
@@ -44,15 +54,10 @@ I'll assume you can get Git installed from [these instructions](https://git-scm.
 git config --global user.name "your-username"
 git config --global user.email "your-email"
 ```
+
 #### Repositories
 
 Git repositories are the containers for individual projects that are version controlled by Git. We'll start with a local Git repository, which is simply a folder on your machine that has been initialized with the `git init` command run within it. To create a local Git repo, either create a new folder or change to an existing one where you want the repository to live.
-
-```bash
-mkdir test
-cd test
-git init
-```
 
 ![](/images/git-init.png)
 
@@ -60,7 +65,7 @@ git init
 
 Easy enough, we can see that it created a hidden .git directory with a handful of files and sub-directories. This is how an empty Git repo initially begins, and there is currently nothing that for it to keep track of.
 
-#### Commits
+#### Git Commit
 
 Commits are discrete point in time snapshots of a repository as it changes. To create commits, we first create or move files into the repo and tell Git to start keeping track of them. You can see I used `touch` to create `example.txt` and `example2.txt`, and then ran `git status`. Git replies that it sees those files present in the repo directory, but it is not tracking them yet. After `git add .`, those files are now being tracked and are in a Staging state, so that they are marked to be included during the next Commit.
 
@@ -76,9 +81,16 @@ Next I use `git commit -m "Commit comment here` to actually affect the commit, a
 
 #### HEAD Pointer
 
-The concept of the [HEAD pointer](https://blog.git-init.com/what-is-head-in-git/) is important to understanding the state of repos. HEAD moves around depending on what commit (snapshot) of the code base we've asked Git to work with. In the screenshots above, notice HEAD --> master. **master** is the name of the default **branch** of our repo. We haven't discussed branches yet, so right now this just tells us our local repo is working with the most recent commit of the teo possible commits we made, in the only branch we have.
+The concept of the [HEAD pointer](https://blog.git-init.com/what-is-head-in-git/) is important to understanding the state of repos. HEAD moves around depending on what commit (snapshot) of the code base we've asked Git to work with. In the screenshots above, notice **HEAD --> master**. **master** is the name of the default **branch** of our repo. We haven't discussed branches yet, so right now this just tells us our local repo is working with the most recent commit of the teo possible commits we made, in the only branch we have.
 
 >HEAD answers the question: Where am I right now in the repository? It is a pointer to the currently checked-out branch or commit, which contains an immutable snapshot of your entire code base at a given time. Whichever commit HEAD is referencing directly (using the hash) or by reference (using a branch), it'll always be the commit on which any local changes are based.
+
+#### Simple Workflow
+
+{{< mermaid >}}
+graph LR;
+A[git init]-->B[File changes]-->C[git add .]-->D[git commit -m]-->B;
+{{< /mermaid >}}
 
 #### Git Diff
 
@@ -88,8 +100,23 @@ We can use commit strings to look at the state of the repo between two commits. 
 
 ![](/images/git-diff2.png)
 
-#### Checkout
+#### Git Checkout
 
 Now assume we want to 
 
-#### Branches
+#### Git Revert
+
+#### Git Branch
+
+## Summary of Commands
+
+| Command | Function |
+| :------- | :------: |
+| `git init`  | One time initialization of a repo |
+| `git add <file(s)>`| Stage changes for teh next commit |
+| `git commit -m "comment"` | Create a commit for staged changes including a comment |
+| `git status` | Get current repo status of staged changes |
+| `git log` | Print order list of commits " |
+| `git checkout <id>` | Temporarily move back to commit <id> |
+| `git revert <id>` | Revert the changes of commit <id> by creating a new commit |
+| `git reset <id>` | Undo commit(s) up to commit <id> by deleting commits |
