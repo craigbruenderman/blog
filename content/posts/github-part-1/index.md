@@ -1,7 +1,7 @@
 ---
 title: "Git Primer"
-draft: true
-date: "2025-07-26"
+draft: false
+date: "2025-07-28"
 series: ["Github"]
 series_order: 1
 categories: ["Devops", "Cloud"]
@@ -61,6 +61,8 @@ Git repositories are the containers for individual projects that are version con
 
 ![](/images/git-init.png)
 
+Note that my prompt shows the file path of the repo, along with the green text **master**. This indicates which **branch** of the repo I'm in and will be discussed more.
+
 ![](/images/git-tree.png)
 
 Easy enough, we can see that it created a hidden .git directory with a handful of files and sub-directories. This is how an empty Git repo initially begins, and there is currently nothing that for it to keep track of.
@@ -85,7 +87,7 @@ There is an alternative workflow to the above for making changes to *only* exist
 
 #### HEAD Pointer
 
-The concept of the [HEAD pointer](https://blog.git-init.com/what-is-head-in-git/) is important to understanding the state of repos. HEAD moves around depending on what commit (snapshot) of the code base we've asked Git to work with. In the screenshots above, notice **HEAD --> master**. **master** is the name of the default **branch** of our repo. We haven't discussed branches yet, so right now this just tells us our local repo is working with the most recent commit of the teo possible commits we made, in the only branch we have.
+The concept of the [HEAD pointer](https://blog.git-init.com/what-is-head-in-git/) is important to understanding the state of repos. HEAD moves around depending on what commit (snapshot) of the code base we've asked Git to work with. In the screenshots above, notice **HEAD --> master**. **master** is the name of the default **branch** of our repo. We haven't discussed branches yet, so right now this just tells us our local repo is working with the most recent commit of the two possible commits we made, in the only branch we have.
 
 >HEAD answers the question: Where am I right now in the repository? It is a pointer to the currently checked-out branch or commit, which contains an immutable snapshot of your entire code base at a given time. Whichever commit HEAD is referencing directly (using the hash) or by reference (using a branch), it'll always be the commit on which any local changes are based.
 
@@ -104,15 +106,31 @@ We can use commit strings to look at the state of the repo between two commits. 
 
 ![](/images/git-diff2.png)
 
-#### Git Checkout
-
-Now assume we want to 
-
 #### Git Revert
+
+When you need to undo the changes made in a particular commit, `git revert <commit id>` is used. This will look at the commit of the given id, and revert just the changes made by that commit. Git will actually create a new commit to affect this change, so the whole lifecycle of the repo continues to be tracked accurately. 
 
 #### Git Branch
 
 Now assume we need our repo to diverge in some way from the main line of contribution so that we can make changes in a particular direction without affecting the primary path of development. A good example of this would be a specific feature or bug fix that we want to work on independently, without painting ourselves in a corner where we can connot incorporate these changes with the main line of development later.
+
+Just by virtue of creating the repo, I actually already have a branch which is the primary line of development. This primary branch is typically called __main__ or __master__, depending on your version of Git. This is configurable in Git from version 2.28.0 onwards, and mine is set to **master**.
+
+Now I'll create an additional branch to veer off into some other line of development.
+
+![](/images/git-branch.png)
+
+{{< alert icon="lightbulb" >}}
+Notice that after creating **test-branch**, I checked it out. This context switch within the repo is indicated by the green prompt which now shows **new-branch** instead of **master**.
+{{< /alert >}}
+
+#### Git Checkout
+
+So now we've seen that `git checkout` can be used to switch between branches, but it can also be used to switch to a certain snapshot (commit).
+
+![](/images/git-checkouts.png)
+
+Notice the directory listing shows that the latest commit includes 3 text files. When I `git checkout git checkout 56fcf3464aa83fc4986976be54074021c8cd5af8`, theat snapshot only includes 2 text files.
 
 ## Summary of Commands
 
