@@ -5,7 +5,7 @@ date: "2025-07-28"
 series: ["Github"]
 series_order: 1
 categories: ["Devops", "Cloud"]
-tags: ["AWS", "Github", "CI/CD"]
+tags: ["Git"]
 ---
 
 {{< typeit 
