@@ -67,7 +67,7 @@ Easy enough, we can see that it created a hidden .git directory with a handful o
 
 #### Git Commit
 
-Commits are discrete point in time snapshots of a repository as it changes. To create commits, we first create or move files into the repo and tell Git to start keeping track of them. You can see I used `touch` to create `example.txt` and `example2.txt`, and then ran `git status`. Git replies that it sees those files present in the repo directory, but it is not tracking them yet. After `git add .`, those files are now being tracked and are in a Staging state, so that they are marked to be included during the next Commit.
+Commits are discrete point in time snapshots of a repository as it changes. To create commits, we first create or move files into the repo and tell Git to start keeping track of them. You can see I used `touch` to create `example.txt` and `example2.txt`, and then ran `git status`. Git replies that it sees those files present in the repo directory, but it is not tracking them yet. After `git add .`, those files are now being tracked and are in a Staging area which Git calls the **index**, so that they are marked to be included during the next Commit.
 
 ![](/images/git-commit.png)
 
@@ -78,6 +78,10 @@ Next I use `git commit -m "Commit comment here` to actually affect the commit, a
 ![](/images/git-log.png)
 
 `git log` now shows me the history of commits I've made, and you can now see why we set username and email address in Git's config, so that it can be recorded in the commit history. Notice the yellow string after the word commit. This indicates a unique identifier for each exact point in time snapshot of the repo corresponding to each commit and these strings end up being used to navigate between commits as you work within a repo.
+
+There is an alternative workflow to the above for making changes to *only* existing Git tracked files. `git commit -a -m "comment"` will notice any modified (but not new) files, add them to the index, and commit, all in one step.
+
+`git log` can be used to show varying degress of detail about the changes made to the repo. Try `git log --stat --summary` and `git log -p` to see some examples.
 
 #### HEAD Pointer
 
@@ -107,6 +111,8 @@ Now assume we want to
 #### Git Revert
 
 #### Git Branch
+
+Now assume we need our repo to diverge in some way from the main line of contribution so that we can make changes in a particular direction without affecting the primary path of development. A good example of this would be a specific feature or bug fix that we want to work on independently, without painting ourselves in a corner where we can connot incorporate these changes with the main line of development later.
 
 ## Summary of Commands
 
