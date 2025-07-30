@@ -68,7 +68,7 @@ Note that my prompt shows the file path of the repo, along with the green text *
 
 Easy enough, we can see that it created a hidden .git directory with a handful of files and sub-directories. This is how an empty Git repo initially begins, and there is currently nothing that for it to keep track of.
 
-### Git Commit
+### Git Staging & Commit
 
 Commits are discrete point in time snapshots of a repository as it changes. To create commits, we first create or move files into the repo and tell Git to start keeping track of them. You can see I used `touch` to create `example.txt` and `example2.txt`, and then ran `git status`. Git replies that it sees those files present in the repo directory, but it is not tracking them yet. After `git add .`, those files are now being tracked and are in a Staging area which Git calls the **index**, so that they are marked to be included during the next Commit.
 
@@ -109,15 +109,42 @@ We can use commit strings to look at the state of the repo between two commits. 
 
 ### Git Revert
 
-When you need to undo the changes made in a particular commit, `git revert <commit id>` is used. This will look at the commit of the given id, and revert just the changes made by that commit. Git will actually create a new commit to affect this change, so the whole lifecycle of the repo continues to be tracked accurately. 
+When you need to undo the changes made in a particular commit, `git revert <commit id>` is used. This will look at the commit of the given id, and revert just the changes made by that commit. Git will actually create a new commit to affect this change, so the whole lifecycle of the repo continues to be tracked accurately. This fact also makes the `git revert` itself reversible since its action is a commit of its own.
 
-### Git Branch
+### Git Reset
 
-Now assume we need our repo to diverge in some way from the main line of contribution so that we can make changes in a particular direction without affecting the primary path of development. A good example of this would be a specific feature or bug fix that we want to work on independently, without painting ourselves in a corner where we can connot incorporate these changes with the main line of development later.
+When you need to remove all changes made since a particular commit, use `git reset --hard <id>`. This is a destructive command in Git, which erases history, so be sure you want this before issuing it because there is no reversing it.
 
-Just by virtue of creating the repo, I actually already have a branch which is the primary line of development. This primary branch is typically called __main__ or __master__, depending on your version of Git. This is configurable in Git from version 2.28.0 onwards, and mine is set to **master**.
+![](/images/git-reset-before.png)
 
-Now I'll create an additional branch to veer off into some other line of development.
+![](/images/git-reset-result.png)
+
+You can see I've used `git reset` to delete all commits back to the first one.
+
+### .gitignore
+
+## Git Branches
+
+Branches are a key concept in Git and they can be thought of as an extension to commits. Just by virtue of creating the repo, I already have a branch which is the primary line of development. This default branch is typically called __main__ or __master__, depending on your version of Git and is configurable in Git from version 2.28.0 onwards; mine is set to **master**.
+
+As commits accumulate in the default main/master branch, they accumulate like so:
+
+{{< mermaid >}}
+---
+config:
+  theme: 'base'
+  gitGraph:
+    mainBranchName: "master"
+---
+gitGraph
+  commit
+  commit
+  commit
+{{< /mermaid >}}
+
+Branches are nothing but containers which contain commits. Assume we need our repo to diverge in some way from the main line of contribution so that we can make changes in a particular direction without affecting the primary line of development. An example is needing a specific bug fix that we want to work on independently, without painting ourselves in a corner where those changes cannot be incorporated into the main line of development later. We also want to leave the main branch in a state that it can continue to be used and deployed without worrying about what is going on with that bug fix.
+
+Now I'll create an additional branch to veer off into some other line of development. By running `bit branch <branch-name>`, I create a new branch which uses the most recent commit as its starting point.
 
 ![](/images/git-branch.png)
 
@@ -125,13 +152,43 @@ Now I'll create an additional branch to veer off into some other line of develop
 Notice that after creating **test-branch**, I checked it out. This context switch within the repo is indicated by the green prompt which now shows **new-branch** instead of **master**.
 {{< /alert >}}
 
+{{< mermaid >}}
+---
+config:
+  gitGraph:
+    mainBranchName: "master"
+---
+gitGraph
+  commit
+  commit
+  commit
+  branch bugfix
+  commit
+  commit
+  checkout master
+  commit
+  merge bugfix
+{{< /mermaid >}}
+
+The diagram indicates that after the 3rd commit in **master**, a new branch called **bugfix** was created. 2 commits were made in the **bugfix** branch to fix the bug, while 1 additional commit was made to **master**. Finally, the bugfix branch was **merged** back into **master** so that **master** could incorporate the changes made in the *bugfix** branch.
+
 ### Git Checkout
 
-So now we've seen that `git checkout` can be used to switch between branches, but it can also be used to switch to a certain snapshot (commit).
+In addition to creating and checking out a branch in separate steps, it can be done in a single step by `git checkout -b <branch name>`. So now we've seen that `git checkout` is used to switch between branches, but it can also be used to switch to a certain snapshot (commit).
 
 ![](/images/git-checkouts.png)
 
-Notice the directory listing shows that the latest commit includes 3 text files. When I `git checkout git checkout 56fcf3464aa83fc4986976be54074021c8cd5af8`, theat snapshot only includes 2 text files.
+Notice the directory listing shows that the latest commit in the **master** branch includes 2 text files. Then I created a new branch, added and committed a file to it, so that **bugfix** has 3 files. Then, switching back to **master**, that commit still only has 2 files.
+
+![](/images/git-log-summary.png)
+
+`git log --summary` indicates the file creation relative to each branch. The **bugfix** branch contains all 3 files, since it inherited 2 of the files when branched from **master**, and then got a third file of its own.
+
+### Merging
+
+When a branch is ready to be merged, issue `git merge <branch to merge>` from within the context of the branch you want to merge into.
+
+![](/images/git-merge.png)
 
 ## Summary of Commands
 
@@ -145,3 +202,7 @@ Notice the directory listing shows that the latest commit includes 3 text files.
 | `git checkout <id>` | Temporarily move back to commit <id> |
 | `git revert <id>` | Revert the changes of commit <id> by creating a new commit |
 | `git reset <id>` | Undo commit(s) up to commit <id> by deleting commits |
+
+## Conclusion
+
+That wraps up the whirlwind primer for Git. I've skipped a lot, so head to that book for much better coverage. This post was mainly helpful for me to dust off some cobwebs.
