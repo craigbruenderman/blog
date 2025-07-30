@@ -1,6 +1,5 @@
 ---
 title: "Git Primer (Part 1)"
-draft: false
 date: "2025-07-28"
 series: ["Git"]
 series_order: 1

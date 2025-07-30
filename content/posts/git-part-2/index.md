@@ -1,6 +1,6 @@
 ---
 title: "Git Primer (Part 2)"
-date: "2025-07-28"
+date: "2025-07-29"
 series: ["Git"]
 series_order: 1
 categories: ["Devops", "Cloud"]
@@ -89,4 +89,4 @@ When a branch is ready to be merged, issue `git merge <branch to merge>` from wi
 
 ## Conclusion
 
-That wraps up the whirlwind primer for Git. I've skipped a lot, so head to that book for much better coverage. This post was mainly helpful for me to dust off some cobwebs.
+That wraps up the whirlwind primer for Git. I've skipped a lot, so head to that book for much better coverage. This post was mainly helpful for me to dust off some Git cobwebs and play with some features of Hugo+Blowfish.
