@@ -84,7 +84,6 @@ Also notice that both the local and remote repos (overlaid) reflect the same com
 
 So, now we've got a local repo which is connected to a remote Github repo via `git remote add`. We can make commits to the local repo, and then `git push` them to the remote Github repo. We can also `git pull` to sync any commits from the remote repo that are ahead of our local repo.
 
-
 ### Origin
 
 The **origin** associated with a repo is a label used as a local identifier to refer to the remote repo.

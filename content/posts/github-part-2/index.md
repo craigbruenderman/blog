@@ -8,15 +8,35 @@ categories: ["Devops", "Cloud"]
 tags: ["Github", "CI/CD"]
 ---
 
-## Github
+## Branches with Github
 
-Github is company that provides cloud-based Git repositories and associated features and tools for collaboration, codebase management, bug tracking, etc. Github Actions are one of the features that we'll look at further.
+Branching with Github in the mix is not a lot different. We still just create local branches as desired like `git checkout -b new-branch`. The extra step is just to `git push -u origin new-branch`.
 
-### Using Git with Github
+![](/images/github-add-branch.png)
+
+![](/images/github-new-branch.png)
+
+You can see the additonal branch **new-branch** is now present on Github, and it contains the file I just added to that branch on my local repo before pushing it. Github tells us this new branch is 1 commit ahead of **main**.
+
+When I'm ready to merge **new-branch** into **main**, I just do so locally by `git checkout main` and `git merge new-branch` to merge, then `git push` to push **main** back up to Github. Github notices the 2 branches are back in sync with commits.
+
+![](/images/github-merge.png)
+
+## Github Pull
+
+In addition to pushing changes from local repos to Github, we can pull changes made to Github repos down into our local branches.
+
+![](/images/github-add-file.png)
+
+![](/images/github-pull.png)
+
+## Cloning Github Repos
+
+
 
 ## Github Actions
 
-### 
+###
 
 {{< mermaid >}}
 
