@@ -1,7 +1,7 @@
 ---
 title: "Github Primer (Part 1)"
-draft: true
-date: "2025-07-28"
+draft: false
+date: "2025-07-31"
 series: ["Github"]
 series_order: 1
 categories: ["Devops", "Cloud"]
