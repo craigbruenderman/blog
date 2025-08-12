@@ -10,6 +10,8 @@ tags: ["Cisco", "ASA", "AWS"]
 
 I often work with Cisco ASA for on-prem and public cloud situations, so I find myself needing to spin them up and down for lab purposes. This post will show the process I use to deploy ASAv in AWS for testing VPNs or whatever I wish.
 
+## Topology
+
 ## AWS Setup
 
 ### Bastion Host
