@@ -12,6 +12,23 @@ tags: ["Palo Alto", "AWS"]
 
 https://weberblog.net/route-vs-policy-based-vpn-tunnels/
 
+## NAT Policy
+
+* Original packet is source information prio to any translation taking place
+  * That means pre-NAT packet information and pre-NAT zone information
+
+## Security Policy
+
+* Pre-NAT IPs, but post-NAT zones
+
+## Source NAT
+
+
+## Destination NAT
+
+Swap the destination address 
+
+When using DNAT with IPsec tunnels on a Palo Alto firewall, the key is to configure the routing table to point the translated IP addresses through the tunnel interface. This ensures that packets, after being translated, are correctly routed through the VPN tunnel. 
 ### Policy-based VPNs
 
 A policy-based VPN does NOT use the routing table but a special additional policy to decide whether IP traffic is sent through a VPN tunnel or not. This policy is similar to policy-based routing which takes precedence over the normal routing table. Hence there are NO routing statements about the remote networks within the routing table.
