@@ -14,7 +14,7 @@ It's been years since I've touched Fortinet in any meaningful way, so I'm taking
 
 ## Components
 
-Here's a lkist of the kit I've got to evaluate.
+Here's a list of the kit I've got to evaluate, along with a rundown of each.
 
 | Qty | Device | Notes
 | :------- | :------: | :------:
@@ -22,11 +22,36 @@ Here's a lkist of the kit I've got to evaluate.
 | 2 | FortiGate-50G | 
 | 2 | FortiSwitch-124G-FPOE | 
 | 1 | Cloud Hosted FortiManager | 
-| 1| Self-hosted FortiManager | Running in AWS
+| 1 | Self-hosted FortiManager | Running in AWS
 
-## FortiManager
 
-## FortiAnalyzer
+### FortiManager
+
+Centralized Management: WebUI for managing multiple Fortinet devices, simplifying administration and improving operational efficiency.
+
+Policy and Configuration Management: Administrators can create, manage, and deploy security policies and configurations across all managed devices from a central location.
+
+Device Management: Tools for managing device inventory, firmware updates, and individual device configurations.
+
+Real-time Monitoring: Real-time monitoring of Fortinet devices, including resource usage, network status, and security events.
+
+Automation and Orchestration: Supports automation and orchestration of security tasks.
+
+SD-WAN Management: Manages SD-WAN deployments, including configuration, monitoring, and policy enforcement.
+
+ZTNA and SASE Support: Can be used to manage Zero Trust Network Access (ZTNA) and Secure Access Service Edge (SASE) deployments.
+
+Role-based Access Control: Supports role-based access control, allowing organizations to assign specific permissions and responsibilities to different users.
+
+#### Form Factors
+
+* On-prem virtual machine
+
+### FortiAnalyzer
+
+### FortiWifi
+
+### FortiSwitch
 
 ## Getting Started
 
