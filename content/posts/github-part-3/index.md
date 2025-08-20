@@ -66,7 +66,7 @@ The entire setup for using Github Actions to render and publish blogs with Hugo 
 
 ![](/images/gh-actions-wf-running.png)
 
-In the image, you can see the *build* job completed in 52s, and the *deploy* job has been underway for 2:38s.
+In the image, you can see the *build* job completed in 52s, and the *deploy* job has been underway for 2:38s. These job runtimes vary quite a bit, likely due to current load on the environment where the Github Runners execute. I've seen my Workflow finish in under a minute, and over 6 minutes. One of the status indicators you'll see indicates if your jobs are waiting in queue to start.
 
 Once the job has completed, Github gives feedback along with a link to the published blog. I have Github Pages configured with a custom domain, but the blog is indeed hosted via Github Pages.
 
