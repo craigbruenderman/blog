@@ -44,11 +44,4 @@ graph TD;
 A[Create Branch]-->B[Make Commits]-->C[Open Pull Request]-->D[PR Review & Approve]-->E[Deploy]-->F[Merge]-->A;
 {{< /mermaid >}}
 
-Create a Branch: Start new work without affecting the main code.
-Make Commits: Save progress as you make changes.
-Open a Pull Request: Ask others to review your work.
-Review: Discuss and improve the changes together.
-Deploy: Test your changes before merging.
-Merge: Add your finished work to the main branch.
-
 ###
