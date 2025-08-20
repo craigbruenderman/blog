@@ -1,9 +1,7 @@
 ---
 title: "Github Actions"
-draft: false
+draft: true
 date: "2025-08-19"
-series: ["Github"]
-series_order: 3
 categories: ["Devops", "Cloud"]
 tags: ["Github", "CI/CD"]
 ---
