@@ -49,6 +49,8 @@ D-->E@{ shape: processes, label: "Github Action triggered by push Event"};
 E-->F@{ shape: lin-cyl, label: "Rendered blog content published via Github Pages"};
 {{< /mermaid >}}
 
+### Keywords Used in Workflow file
+
 * The **name** keyword to define the name of the Workflow
 * The **on** keyword defines the Events which trigger the Workflow execution
 * The **jobs** keyword has job names nested underneath it with the **runs_on** keyword to indicate which Runner execution environment to use
@@ -57,3 +59,15 @@ E-->F@{ shape: lin-cyl, label: "Rendered blog content published via Github Pages
 * **deploy** is another Job which uses another Github Action which deploys the resulting Hugo-rendered blog to Github Pages
 
 {{< codeimporter url="https://raw.githubusercontent.com/craigbruenderman/blog/refs/heads/main/.github/workflows/hugo.yaml" type="yaml" >}}
+
+### Setup in Github
+
+The entire setup for using Github Actions to render and publish blogs with Hugo is covered [here](https://gohugo.io/host-and-deploy/host-on-github-pages/). Github provides real-time feedback while Workflows are running.
+
+![](/images/gh-actions-wf-running.png)
+
+In the image, you can see the *build* job completed in 52s, and the *deploy* job has been underway for 2:38s.
+
+Once the job has completed, Github gives feedback along with a link to the published blog. I have Github Pages configured with a custom domain, but the blog is indeed hosted via Github Pages.
+
+![](/images/gh-actions-wf-success.png)
