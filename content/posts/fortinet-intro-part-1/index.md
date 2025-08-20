@@ -1,9 +1,9 @@
 ---
-title: "A Look at Fortinet"
-date: "2025-08-07"
+title: "Fortinet Into - Part 1"
+date: "2025-08-15"
 draft: true
-series: ["Fortinet Intro"]
-series_order: 1
+series: ["A look at Fortinet"]
+series_order: 2
 categories: ["Networking"]
 tags: ["Fortinet"]
 ---

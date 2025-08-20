@@ -16,7 +16,7 @@ These are the foundational elements you should understand when starting out with
 
 ### Workflows
 
-Workflows are automated processes that run one or more jobs. Workflows are attached to repos, and there can be any number of them in a repo. Workflows are defined in YAML files that lives in your repo in the ```.github/workflows``` directory. There are reserved keywords that are used to define different parts of the Workflow.
+Workflows are automated processes that run one or more jobs. Workflows are attached to repos, and there can be any number of them in a repo. Workflows are defined in YAML files that lives in your repo in the `.github/workflows` directory. There are reserved keywords that are used to define different parts of the Workflow.
 
 ### Jobs
 

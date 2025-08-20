@@ -1,7 +1,7 @@
 ---
 title: "Github Primer (Part 2)"
 draft: true
-date: "2025-07-27"
+date: "2025-08-19"
 series: ["Github"]
 series_order: 2
 categories: ["Devops", "Cloud"]
@@ -35,30 +35,20 @@ In addition to pushing changes from local repos to Github, we can pull changes m
 ## Pull Requests
 
 
-
 ## Working with Forks
 
+## Github Workflow
 
+{{< mermaid >}}
+graph TD;
+A[Create Branch]-->B[Make Commits]-->C[Open Pull Request]-->D[PR Review & Approve]-->E[Deploy]-->F[Merge]-->A;
+{{< /mermaid >}}
 
-## Github Actions
+Create a Branch: Start new work without affecting the main code.
+Make Commits: Save progress as you make changes.
+Open a Pull Request: Ask others to review your work.
+Review: Discuss and improve the changes together.
+Deploy: Test your changes before merging.
+Merge: Add your finished work to the main branch.
 
 ###
-
-{{< mermaid >}}
-
-timeline
-    title Timeline
-    2002 : LinkedIn
-    2004 : Facebook : Google
-    2005 : YouTube
-    2006 : Twitter
-{{< /mermaid >}}
-
-{{< mermaid >}}
-sankey-beta
-%% source,target,value
-Attention Span,Incoming texts, 30
-Attention Span,Incoming Teams, 30
-Attention Span,Incoming Webex, 30
-Attention Span,Actual work, 20
-{{< /mermaid >}}
