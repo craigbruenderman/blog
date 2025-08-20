@@ -74,11 +74,19 @@ Notice the directory listing shows that the latest commit in the **master** bran
 
 ### Merging
 
-When a branch is ready to be merged back into the main development branch, issue `git merge <branch to merge>` from within the context of the branch you want to merge into.
+Merging in Git is pretty much what it sounds like - combining changes from one branch with another. It is the natural next step after branching. When a branch is ready to be merged back into the main development branch, issue `git merge <branch to merge>` from within the context of the branch you want to merge into (which is usually main/master).
 
 ![](/images/git-merge.png)
 
 Branches can be renamed with `git branch -m <old> <new>`. Once you have merged and are done with a branch, `git branch -d <branch-name>` will delete it. To delete a branch that has *not* been merged, `git branch -D <branch-name>`.
+
+### Merge Conflicts
+
+This is where things get tricky. Suppose you're working in **main**, and create **new-branch** to test something. If you then make changes to the same part of a file(s) in both **main** and **new-branch**, and then attempt to merge **new-branch** back into **main**, you will encounter a merge conflict as Git sees conflicting changes and doesn't know what was intended.
+
+Below is an example where I purposely created a merge conflict. You can see markers in the file where Git indicates the merge conflict exists. Correct this manually and then merge again.
+
+![](/images/git-merge-conflict.png)
 
 ## Summary of Commands
 
@@ -95,4 +103,4 @@ Branches can be renamed with `git branch -m <old> <new>`. Once you have merged a
 
 ## Conclusion
 
-That wraps up the whirlwind primer for Git. I've skipped a lot, so head to that book for much better coverage. This post was mainly helpful for me to dust off some Git cobwebs and play with some features of Hugo+Blowfish.
+That wraps up a very short primer for Git. I've skipped a lot, so head to that book for much better coverage. This post was mainly helpful for me to dust off some Git cobwebs and play with some features of Hugo+Blowfish.
