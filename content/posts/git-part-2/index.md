@@ -9,22 +9,7 @@ tags: ["Git"]
 
 ## Git Branches
 
-Continuing on from the first post, branches are a key concept in Git and they can be thought of as an extension to commits. Just by virtue of creating the repo, I already have a branch which is the primary line of development. This default branch is typically called __main__ or __master__, depending on your version of Git and is configurable in Git from version 2.28.0 onwards; mine is set to **master**.
-
-As commits accumulate in the default main/master branch, they accumulate like so:
-
-{{< mermaid >}}
----
-config:
-  theme: 'base'
-  gitGraph:
-    mainBranchName: "master"
----
-gitGraph
-  commit
-  commit
-  commit
-{{< /mermaid >}}
+Continuing on from the first post, branches are a key concept in Git and they can be thought of as an extension to commits. Just by virtue of creating the repo, I already have a branch which is the primary line of development. This default branch is typically called **main** or **master**, depending on your version of Git and is configurable in Git from version 2.28.0 onwards; mine is currently set to **master**.
 
 Branches are nothing but containers which contain commits. Assume we need our repo to diverge in some way from the main line of contribution so that we can make changes in a particular direction without affecting the primary line of development. An example is needing a specific bug fix that we want to work on independently, without painting ourselves in a corner where those changes cannot be incorporated into the main line of development later. We also want to leave the main branch in a state that it can continue to be used and deployed without worrying about what is going on with that bug fix.
 

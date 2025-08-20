@@ -77,6 +77,21 @@ Next I use `git commit -m "Commit comment here` to actually affect the commit, a
 
 ![](/images/git-commit.png)
 
+As commits accumulate in the default main/master branch, they accumulate like so:
+
+{{< mermaid >}}
+---
+config:
+  theme: 'base'
+  gitGraph:
+    mainBranchName: "master"
+---
+gitGraph
+  commit
+  commit
+  commit
+{{< /mermaid >}}
+
 ![](/images/git-log.png)
 
 `git log` now shows me the history of commits I've made, and you can now see why we set username and email address in Git's config, so that it can be recorded in the commit history. Notice the yellow string after the word commit. This indicates a unique identifier for each exact point in time snapshot of the repo corresponding to each commit and these strings end up being used to navigate between commits as you work within a repo.
@@ -134,4 +149,4 @@ temp/       # Anything in a directory called temp
 *.log       # Files with .log extension
 ```
 
-You may also want to setup a global **.gitignore** that applies to all projects. This can be done by creating something like **~/.gitignore_global** and configuring Git to use it via ``git config --global core.excludesfile ~/.gitignore_global```.
+You may also want to setup a global **.gitignore** that applies to all projects. This can be done by creating something like **~/.gitignore_global** and configuring Git to use it via ```git config --global core.excludesfile ~/.gitignore_global```.
