@@ -1,7 +1,7 @@
 ---
 title: "Github Actions"
-draft: true
-date: "2025-09-19"
+draft: false
+date: "2025-08-19"
 series: ["Github"]
 series_order: 3
 categories: ["Devops", "Cloud"]
@@ -18,10 +18,42 @@ These are the foundational elements you should understand when starting out with
 
 ### Workflows
 
-Workflows are automated processes that run one or more jobs. Workflows are defined in a YAML file that lives in your repo in the ```.github/workflows``` directory.
-
-### Events
+Workflows are automated processes that run one or more jobs. Workflows are attached to repos, and there can be any number of them in a repo. Workflows are defined in YAML files that lives in your repo in the ```.github/workflows``` directory. There are reserved keywords that are used to define different parts of the Workflow.
 
 ### Jobs
 
+Jobs are contained within workflows, and contain one or more steps that are executed in order. Jobs themselves run in parallel by default, but can be configured to run sequentially as well as conditionally. Again, there can be any number of jobs in a workflow.
+
 ### Steps
+
+Steps are the specific individual tasks contained within a job. The Steps themselves are either shell commands, or Github defined Actions. Any number of steps can be defined in a job, and they run in the order they are defined. Steps can be conditional, like Jobs.
+
+### Events
+
+Events are the trigger conditions that cause workflows to execute. Events could be manual actions or things such as a push to the repo.
+
+### Runners
+
+Runners are execution environments that jobs run within. Github offers [pre-built Runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners) for MacOS, Linux, and Windows operating systems to execute steps within, and custom Runners can also be created and used.
+
+## Hugo Blog Publishing Use Case
+
+One of the things I use Github actions for is to process and publish this very blog. The process goes like so:
+
+{{< mermaid >}}
+graph TB;
+A@{ shape: docs, label: "Draft posts in Markdown locally"}-->B@{ shape: trap-b, label: "Review by running hugo server locally"};
+B-->C[Commit drafts to local repo];
+C-->D[Push local repo to Github];
+D-->E@{ shape: processes, label: "Github Action triggered by push Event"};
+E-->F@{ shape: lin-cyl, label: "Rendered blog content published via Github Pages"};
+{{< /mermaid >}}
+
+* The **name** keyword to define the name of the Workflow
+* The **on** keyword defines the Events which trigger the Workflow execution
+* The **jobs** keyword has job names nested underneath it with the **runs_on** keyword to indicate which Runner execution environment to use
+* The **steps** keyword contains key/value pairs of each step
+* There is a a **Github Action** used in one of these steps to checkout the blog repo into the Runner
+* **deploy** is another Job which uses another Github Action which deploys the resulting Hugo-rendered blog to Github Pages
+
+{{< codeimporter url="https://raw.githubusercontent.com/craigbruenderman/blog/refs/heads/main/.github/workflows/hugo.yaml" type="yaml" >}}
