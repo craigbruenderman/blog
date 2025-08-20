@@ -2,7 +2,7 @@
 title: "Git Primer (Part 2)"
 date: "2025-07-29"
 series: ["Git"]
-series_order: 1
+series_order: 2
 categories: ["Devops", "Cloud"]
 tags: ["Git"]
 ---
@@ -26,9 +26,9 @@ gitGraph
   commit
 {{< /mermaid >}}
 
-It turns out that Branches are nothing but organizational containers which contain commits. Assume we need our repo to diverge in some way from the main line of development so that we can make changes in a particular direction without affecting the primary line of development. An example is needing to fix a specific bug independently, without painting ourselves in a corner where those changes cannot be incorporated into the main line of development later. We also want to leave the main branch in a state that it can continue to be used and deployed without worrying about what is going on with that bug fix. This is a bit hard to articulate clearly, but becomes well understood as one works with Git.
+It turns out that Branches are nothing but organizational containers which contain commits. Assume we need our repo to diverge in some way from the main line of development so that we can make changes in a particular direction without affecting the primary line of development. Branches provide a sort of separate workspace where changes can be made without affecting the main line of development. That leaves the main branch in a state that it can continue to be used and deployed without worrying about what is going on in the other branches. Branches are commonly used to fix bugs or work on features, but they also commonly play a role in team based development. This is a bit hard to articulate clearly, but will become well understood as one works with Git.
 
-To demonstrate, I'll create an additional branch to veer off into some other line of development. By running `git branch <branch-name>`, I create a new branch which uses the most recent commit as its starting point. Then `git checkout new-branch` *checks out* this newly created branch. This means that going forward, any actions on the repo will be directed into this organizational container of repo history.
+To demonstrate, I'll create an additional branch to veer off into some other line of development. By running `git branch <branch-name>`, I create a new branch which uses the most recent commit to **master** as its starting point. Then `git checkout new-branch` *checks out* this newly created branch. This means that going forward, any actions on the repo will be directed into this organizational container of repo history, but not in **master**.
 
 ![](/images/git-branch.png)
 
@@ -58,6 +58,8 @@ gitGraph
 
 The diagram indicates that after the 3rd commit in **master**, a new branch called **bugfix** was created. 2 commits were made in the **bugfix** branch to fix the bug, while 1 additional commit was made to **master**. Finally, the bugfix branch was **merged** back into **master** so that **master** could incorporate the changes made in the **bugfix** branch.
 
+Within a repo, `git branch` will list all branches that exist in the repo.
+
 ### Git Checkout
 
 In addition to creating and checking out a branch in separate steps, the two steps can be combined with `git checkout -b <branch name>`. So now we've seen that `git checkout` is used to switch between branches, but it can also be used to switch to a certain snapshot (commit).
@@ -72,19 +74,21 @@ Notice the directory listing shows that the latest commit in the **master** bran
 
 ### Merging
 
-When a branch is ready to be merged, issue `git merge <branch to merge>` from within the context of the branch you want to merge into.
+When a branch is ready to be merged back into the main development branch, issue `git merge <branch to merge>` from within the context of the branch you want to merge into.
 
 ![](/images/git-merge.png)
+
+Branches can be renamed with `git branch -m <old> <new>`. Once you have merged and are done with a branch, `git branch -d <branch-name>` will delete it. To delete a branch that has *not* been merged, `git branch -D <branch-name>`.
 
 ## Summary of Commands
 
 | Command | Function |
 | :------- | :------: |
 | `git init`  | One time initialization of a repo |
-| `git add <file(s)>`| Stage changes for teh next commit |
-| `git commit -m "comment"` | Create a commit for staged changes including a comment |
-| `git status` | Get current repo status of staged changes |
-| `git log` | Print order list of commits " |
+| `git add <file(s)>`| Stage changes for the next commit |
+| `git commit -m "comment"` | Create a commit for staged changes with a comment |
+| `git status` | Get current repo, including status of staged changes |
+| `git log` | Print ordered list of commits |
 | `git checkout <id>` | Temporarily move back to commit <id> |
 | `git revert <id>` | Revert the changes of commit <id> by creating a new commit |
 | `git reset <id>` | Undo commit(s) up to commit <id> by deleting commits |

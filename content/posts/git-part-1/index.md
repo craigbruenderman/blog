@@ -67,11 +67,15 @@ Note that my prompt shows the file path of the repo, along with the green text *
 
 Easy enough, we can see that it created a hidden .git directory with a handful of files and sub-directories. This is how an empty Git repo initially begins, and there is currently nothing that for it to keep track of.
 
-### Git Staging & Commit
+### Git Staging
 
-Commits are discrete point in time snapshots of a repository as it changes. To create commits, we first create or move files into the repo and tell Git to start keeping track of them. You can see I used `touch` to create `example.txt` and `example2.txt`, and then ran `git status`. Git replies that it sees those files present in the repo directory, but it is not tracking them yet. After `git add .`, those files are now being tracked and are in a Staging area which Git calls the **index**, so that they are marked to be included during the next Commit.
+Commits are discrete point in time snapshots of a repository as it changes. To create commits, we first create or move files into the repo and tell Git to start keeping track of them. You can see I used `touch` to create `example.txt` and `example2.txt`, and then ran `git status`. Git replies that it sees those files present in the repo directory, but it is not tracking them yet. After `git add .`, those files are now being tracked in a Staging area which Git calls the **index**, so that they are marked to be acted upon in the next Commit.
 
 ![](/images/git-commit.png)
+
+To unstage a file that has been added to the staging area but not yet committed use `git restore --staged <filename>`.
+
+### Git Commit
 
 Next I use `git commit -m "Commit comment here` to actually affect the commit, and this snapshot of changes has been recorded in Git. If you issue only `git commit` without the comment argument, Git will open your editor and ask you to input the commit comment right there. Then I made a change to example2.txt, ran `git status` to see that Git noticed it has changed, staged it with `git add`, and made my second commit to this repo. It might not initially make sense that one must add files to Git repeatedly, so think of `git add` as adding a certain file in a certain state, and know that any time you want to record the changed state, you must `git add` the file again.
 
@@ -108,9 +112,14 @@ The concept of the [HEAD pointer](https://blog.git-init.com/what-is-head-in-git/
 
 ### Simple Workflow
 
+You'll routinely work with 3 areas of Git:
+* Working Directory: The directory where files live and are edited
+* Staging Area (Index): Where files go in preparation for changes to be committed
+* Repository: Where committed history is stored
+
 {{< mermaid >}}
 graph LR;
-A[git init]-->B[File changes]-->C[git add .]-->D[git commit -m]-->B;
+A[git init]-->B[Development Work]-->C[git add .]-->D[git commit -m]-->B;
 {{< /mermaid >}}
 
 ### Git Diff
@@ -149,4 +158,4 @@ temp/       # Anything in a directory called temp
 *.log       # Files with .log extension
 ```
 
-You may also want to setup a global **.gitignore** that applies to all projects. This can be done by creating something like **~/.gitignore_global** and configuring Git to use it via ```git config --global core.excludesfile ~/.gitignore_global```.
+You may also want to setup a global **.gitignore** that applies to all projects. This can be done by creating something like **~/.gitignore_global** and configuring Git to use it via `git config --global core.excludesfile ~/.gitignore_global`.
