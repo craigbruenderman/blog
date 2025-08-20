@@ -11,15 +11,32 @@ tags: ["Git"]
 
 Continuing on from the first post, branches are a key concept in Git and they can be thought of as an extension to commits. Just by virtue of creating the repo, I already have a branch which is the primary line of development. This default branch is typically called **main** or **master**, depending on your version of Git and is configurable in Git from version 2.28.0 onwards; mine is currently set to **master**.
 
-Branches are nothing but containers which contain commits. Assume we need our repo to diverge in some way from the main line of contribution so that we can make changes in a particular direction without affecting the primary line of development. An example is needing a specific bug fix that we want to work on independently, without painting ourselves in a corner where those changes cannot be incorporated into the main line of development later. We also want to leave the main branch in a state that it can continue to be used and deployed without worrying about what is going on with that bug fix.
+Recall from Part 1 that I was working with a repo containing the single default branch, called **master**. As I added commits to **master**, they accumulated in order like so:
 
-Now I'll create an additional branch to veer off into some other line of development. By running `bit branch <branch-name>`, I create a new branch which uses the most recent commit as its starting point.
+{{< mermaid >}}
+---
+config:
+  theme: 'base'
+  gitGraph:
+    mainBranchName: "master"
+---
+gitGraph
+  commit
+  commit
+  commit
+{{< /mermaid >}}
+
+It turns out that Branches are nothing but organizational containers which contain commits. Assume we need our repo to diverge in some way from the main line of development so that we can make changes in a particular direction without affecting the primary line of development. An example is needing to fix a specific bug independently, without painting ourselves in a corner where those changes cannot be incorporated into the main line of development later. We also want to leave the main branch in a state that it can continue to be used and deployed without worrying about what is going on with that bug fix. This is a bit hard to articulate clearly, but becomes well understood as one works with Git.
+
+To demonstrate, I'll create an additional branch to veer off into some other line of development. By running `git branch <branch-name>`, I create a new branch which uses the most recent commit as its starting point. Then `git checkout new-branch` *checks out* this newly created branch. This means that going forward, any actions on the repo will be directed into this organizational container of repo history.
 
 ![](/images/git-branch.png)
 
 {{< alert icon="lightbulb" >}}
-Notice that after creating **test-branch**, I checked it out. This context switch within the repo is indicated by the green prompt which now shows **new-branch** instead of **master**.
+Notice that after checking out **new-branch**, this repo context switch is indicated by the green prompt which now shows **new-branch** instead of **master**.
 {{< /alert >}}
+
+This diagram shows how a branching operation might proceed:
 
 {{< mermaid >}}
 ---
@@ -39,11 +56,11 @@ gitGraph
   merge bugfix
 {{< /mermaid >}}
 
-The diagram indicates that after the 3rd commit in **master**, a new branch called **bugfix** was created. 2 commits were made in the **bugfix** branch to fix the bug, while 1 additional commit was made to **master**. Finally, the bugfix branch was **merged** back into **master** so that **master** could incorporate the changes made in the *bugfix** branch.
+The diagram indicates that after the 3rd commit in **master**, a new branch called **bugfix** was created. 2 commits were made in the **bugfix** branch to fix the bug, while 1 additional commit was made to **master**. Finally, the bugfix branch was **merged** back into **master** so that **master** could incorporate the changes made in the **bugfix** branch.
 
 ### Git Checkout
 
-In addition to creating and checking out a branch in separate steps, it can be done in a single step by `git checkout -b <branch name>`. So now we've seen that `git checkout` is used to switch between branches, but it can also be used to switch to a certain snapshot (commit).
+In addition to creating and checking out a branch in separate steps, the two steps can be combined with `git checkout -b <branch name>`. So now we've seen that `git checkout` is used to switch between branches, but it can also be used to switch to a certain snapshot (commit).
 
 ![](/images/git-checkouts.png)
 
