@@ -121,3 +121,17 @@ When you need to remove all changes made since a particular commit, use `git res
 You can see I've used `git reset` to delete all commits back to the first one.
 
 ### .gitignore
+
+Frequently it's required to exclude certain locally stored files and directories from the Git repo itself. These could be the infamous .DS_Store files in MacOS, settings and variable specific to your own system, and especially sensitive credentials. A common security vulnerability these days is leaking of API tokens which have been stored along with the code that uses them, and it can be a real disaster if those keys are for something like a high permission AWS/Azure account. A fun side-quest is to use [Canary Tokens](https://docs.canarytokens.org/guide/) to generate honeypot credentials, put them somewhere publicly accessible, and see how long it takes for them to be stolen.
+
+You can add a file called **.gitignore** to any Git repo, and include text entries of file and directory patterns that should be ignored so they are not tracked by Git. The syntax is all [here](https://www.w3schools.com/git/git_ignore.asp).
+
+```
+# Sample .gitignore file
+
+.DS_Store   # Mac files
+temp/       # Anything in a directory called temp
+*.log       # Files with .log extension
+```
+
+You may also want to setup a global **.gitignore** that applies to all projects. This can be done by creating something like **~/.gitignore_global** and configuring Git to use it via ``git config --global core.excludesfile ~/.gitignore_global```.
