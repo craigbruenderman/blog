@@ -1,7 +1,6 @@
 ---
 title: "Github Actions"
-draft: true
-date: "2025-08-19"
+date: "2025-08-24"
 categories: ["Devops", "Cloud"]
 tags: ["Github", "CI/CD"]
 ---
@@ -69,3 +68,7 @@ In the image, you can see the *build* job completed in 52s, and the *deploy* job
 Once the job has completed, Github gives feedback along with a link to the published blog. I have Github Pages configured with a custom domain, but the blog is indeed hosted via Github Pages.
 
 ![](/images/gh-actions-wf-success.png)
+
+## Conclusion
+
+That was a brief look at Github Actions as CI/CD pipeline. There are much moire sophisticated workflows that can be built and my little example did not employ any sort of testing. I'll look to incorporate Github Actions in a future post on a topic that uses Terraform to demonstrate more CI/CD features.
