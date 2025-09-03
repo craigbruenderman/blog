@@ -1,6 +1,6 @@
 ---
 title: "Fortinet Intro - Part 1"
-date: "2025-08-15"
+date: "2025-09-02"
 draft: false
 series: ["A look at Fortinet"]
 series_order: 2
@@ -128,6 +128,10 @@ Finally, login to FortiManager and navigate to Device Manager --> Devices & Grou
 Choose the correct device and authorize it.
 
 ![](/images/fg-fortimanager-auth2.png)
+
+14 seconds later, my device is now authorized and under the management control of FortiManager.
+
+![](/images/fg-fortimanaged.png)
 
 ## A word on mounting
 
