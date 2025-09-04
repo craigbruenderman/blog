@@ -1,7 +1,6 @@
 ---
-draft: true
 title: "Cisco SD-WAN (Part 1)"
-date: "2025-07-05"
+date: "2025-09-03"
 series: ["Cisco SD-WAN"]
 series_order: 1
 categories: ["Networking"]
