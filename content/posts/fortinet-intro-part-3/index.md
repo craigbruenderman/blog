@@ -1,11 +1,11 @@
 ---
-title: "Part 3 - SD-WAN"
+title: "Fortinet Part 3 - SD-WAN"
 date: "2025-09-02"
 draft: true
 series: ["A look at Fortinet"]
-series_order: 2
+series_order: 3
 categories: ["Networking"]
-tags: ["Fortinet"]
+tags: ["Fortinet", "SD-WAN"]
 ---
 
 ## Overview
