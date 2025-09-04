@@ -105,6 +105,10 @@ Then enter the FORTICLOUD KEY found on a sticker on top of your device, along wi
 
 ![](/images/fg-reg-forticloud-key.png)
 
+Once registered, assets will show up like so.
+
+![](/images/fg-assets.png)
+
 ### Device Bootstrapping
 
 The next step is to get your Fortigate online so that it can be managed ad-hoc or, in my case, registered with FortiManager. For the FortiGate 50G's I'm testing, this is as simple as feeding a their WAN interface a link that provides DHCP and a path to the Internet. If the available Internet link doesn't provide DHCP, cable into one of the Fortigates LAN ports and pull DHCP. The Fortigate admin interface will be at https://192.168.1.99 with username **admin** and an empty password. On Fortigates with on-board WiFi, they will broadcast the SSID **fortinet**, with PSK **fortinet** which can be used instead of cabling to a LAN interface.
