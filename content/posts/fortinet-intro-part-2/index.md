@@ -48,8 +48,25 @@ At this point, I have a functional FortiManager, ready to manage Forti-devices.
 
 ## Tasks
 
+* HA setup
+```bash
+get system ha status
+get system status
+```
+* HA troubleshooting
+```bash
+execute ha synchronize stop
+diagnose debug reset
+diagnose debug enable
+diagnose debug console timestamp enable
+diagnose debug application hasync -1
+diagnose debug application hatalk -1
+execute ha synchronize start
+```
+
 * Review and demonstrate ZTP
 * Review and configure Provisioning Templates
+  * Problem with config pushes
 * Configure initial firmware baseline
 * Configure firmware life cycle policies
 * Overview of Fortinet SD-WAN mechanics
@@ -59,3 +76,4 @@ At this point, I have a functional FortiManager, ready to manage Forti-devices.
   * Private transport
 * Configure SD-WAN app routing policies
 * Configure SD-WAN Internet use, impairment detection, failover
+* Problem with DNS lookups when transport is down
