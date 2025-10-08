@@ -92,6 +92,12 @@ I pre-built route-maps with Terraform in Azure, but I haven't yet applied them. 
 
 ![](/images/azure-rmaps-asav.png)
 
+## ASA Outside interface
+
+Here's how I've got the ASAv's outside interface configured. Wide open NSG along with a public IP that will serve as the tunnel endpoint later.
+
+![](/images/asav-nic1.png)
+
 ## Conclusion
 
 I'm going to tie off Part 1 here. In Part 2, I'll continue on and get some tunnels up.
