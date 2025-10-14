@@ -34,19 +34,12 @@ Looking at examples can be confusing because there are several permutations that
 IKEv1 and IKEv2 have different syntax. IKEv1 should be considered deprecated at this point and not used, but it still comes up regularly because… inertia. We all should be using IKEv2.
 
 ``` 
-! IKEv2 crypto policy example
 crypto ikev2 policy 1
 ! encryption
  encryption aes-256
  integrity sha256
  lifetime seconds 86400
 ! Diffie-Hellman group
- group 20
-
-crypto ikev2 policy 2
- encryption aes-256
- integrity sha256
- lifetime seconds 86400
  group 20
 
 crypto ikev2 enable outside
