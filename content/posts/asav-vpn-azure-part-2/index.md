@@ -145,7 +145,11 @@ router bgp 65501
 
 ### From Azure
 
-![](/images/azaure-asav-routes.png)
+![](/images/azure-asav-routes.png)
+
+### From Fortigate
+
+![](/images/fortigate-asav-tunnel.png)
 
 ### Client behind Fortigate
 
