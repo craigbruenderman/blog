@@ -3,7 +3,7 @@ title: "Fortinet Intro - Part 1"
 date: "2025-09-02"
 draft: false
 series: ["A look at Fortinet"]
-series_order: 2
+series_order: 1
 categories: ["Networking"]
 tags: ["Fortinet"]
 ---
