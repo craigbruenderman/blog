@@ -20,8 +20,7 @@ Before revisiting FortiManager, FortiGate Cloud is another product I wanted to m
 
 ## FortiManager in AWS
 
-I'm first testing the self-hosted version of FortiManager, and I'm running it in ~~the best~~ my preferred public cloud, AWS.
-FortiManager does not sit in the control or data plane of any of the Forti-devices that it will end up managing, it is just the management plane. Still, this is an important function and I want it to be both highly available, and horizontally scalable to a very large number of devices under management. To meet these goals, I combine 2 separate, but sort of related concepts. 
+I'm first testing the self-hosted version of FortiManager, and I'm running it in ~~the best~~ my preferred public cloud, AWS. FortiManager does not sit in the control or data plane of any of the Forti-devices that it will end up managing, it is just the management plane. Still, this is an important function and I want it to be both highly available, and horizontally scalable to a very large number of devices under management. To meet these goals, I combine 2 separate, but sort of related concepts.
 
 ### FortiManager HA (Cluster)
 
