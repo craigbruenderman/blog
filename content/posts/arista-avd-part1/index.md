@@ -9,3 +9,12 @@ tags: ["Arista"]
 ---
 
 ## Overview
+
+## UV & AVD Prep
+
+uv tool install ansible-core --with ansible
+uv tool list
+uv tool upgrade ansible-core
+ansible-galaxy collection install arista.avd
+
+## 

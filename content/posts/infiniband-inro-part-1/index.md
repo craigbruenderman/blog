@@ -9,3 +9,14 @@ tags: ["Infiniband", "Nvidia"]
 ---
 
 ## Overview
+
+#### GUID
+
+* 64-bit addresses
+* System GUID
+* Node GUID
+* Port GUID
+
+#### LID
+
+* 16-bit address assigned to each Infiniband port
