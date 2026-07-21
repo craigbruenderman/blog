@@ -37,9 +37,19 @@ tags: ["Infiniband", "Nvidia"]
   * Single or multi-port options
   * ConectX by Nvidia is most common
     * These are unified, supporting both Ethernet and Infiniband
-    * 
 
 ## Control Plane
+
+#### GUID
+
+* 64-bit addresses
+* System GUID
+* Node GUID
+* Port GUID
+
+#### LID
+
+* 16-bit address assigned to each Infiniband port
 
 ### Subnet Manager
 
@@ -81,5 +91,3 @@ tags: ["Infiniband", "Nvidia"]
 ## Subnet Manager
 
 ## Infiniband Addressing
-
-##
