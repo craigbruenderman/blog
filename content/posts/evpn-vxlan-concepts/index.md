@@ -8,8 +8,6 @@ tags: ["EVPN", "VXLAN"]
 
 ## Overview
 
-Enterprise networks
-
 ## Underlay Networks
 
 ## Overlay Networks
