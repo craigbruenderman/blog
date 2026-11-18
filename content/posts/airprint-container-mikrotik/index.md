@@ -1,5 +1,5 @@
 ---
-title: "Running an Airpint Container on a Mikrotrik Router"
+title: "Running an Airprint Container on a Mikrotik Router"
 draft: true
 date: "2025-07-09"
 categories: ["Containers"]
